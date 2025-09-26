@@ -1,0 +1,176 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>The Cabinet</TITLE>
+<META NAME="Template" CONTENT="C:\PROGRAM FILES\MICROSOFT OFFICE\OFFICE\html.dot">
+</HEAD>
+<BODY TEXT="#ffff00" LINK="#ffff00" VLINK="#c0c0c0" bgproperties="fixed" BACKGROUND="graphics/classic.jpg">
+
+<B><FONT FACE="Comic Sans MS"><P>The CRT Tube</P>
+</B></FONT><P><IMG SRC="graphics/questions.gif" WIDTH=80 HEIGHT=80></P>
+<FONT FACE="Comic Sans MS"><P>This is the toughest part if you don't have a clue what you're doing in the first place, like me.</P>
+<P>Prior to acquiring the cabinet I had no idea how I was gonna do this. Saturday morning rolled around. Big hangover. "Careful not to electrocute yourself, buddy!" Checked out the inputs on the tube: five leads? "What the hell are they for?"</P>
+<P>My original idea was to simply use my very expensive <B>ATI Graphics Pro Turbo PC2TV 4MB SDRAM PCI </B>video card that I had in my computer upstairs. (Seeing that I just bought a newer <B>ATI All-In-Wonder Pro PC2TV 4MB~8MB SDRAM PCI </B>video card with a TV Tuner and video capture for my main computer.)</P>
+<P>Fat chance of that though. The PC2TV video cards only have a composite video (that little RCA jack) connector and an S-Video YUV connector. Both useless for hooking up to an RGB+ CRT. (Red-Green-Blue Cathode Ray Tube.) This was a drag because the PC2TV video cards do an awesome job of scaling every VESA 2.1 mode (including 320x240, 400x300, 512x384, and other "perfect-fit" modes not available on VESA 1.2 or 2.0 compliant cards) on my television.</P>
+<P>This was the biggest single problem I had with converting the unit. The CRT was a challenge indeed.</P>
+<P>No way I was gonna use a PC monitor! YUCK! What's the point?</P>
+<P>Terry came over. Poked around a bit inside and stated that "RGB will give you the best picture over any other method, anyway." Hmmm. He drank all my beer and soon left with only that piece of advice to offer and one big burp. Thanks, buddy!</P>
+<P>I think that was all I did for that day. Spent Sunday surfing the Net for solutions. SOL. I must have read about 1,000 pages of documentation on MDA vs. CGA vs. EGA vs. VGA vs. NTSC (North American 60Hz) television vs. PAL (European 50Hz) television, blah blah blah blah blah. So I checked out my original idea of using a PC2TV video card with a converter inbetween. Yikes! $1,300+ for a converter for composite video to RGB. Lots of cheapies for the other way around conversion, and other types of conversion but they all hooked up to TV composite input jacks, or RF (radio frequency) like your basic cable connector. Useless. Futile.</P>
+<P>The only thing that looked promising was the CGA which had the exact same horizontal and vertical sync rates as a standard television. Try finding a game which runs off of a CGA card! Yeah, right. Maybe Leisure Suit Larry or something about 10 years old. Bad solution.</P>
+<P>Thought of ripping up an old flaky VCR I’ve got. It’s got composite input for my PC2TV card, surely it must have an RGB converter inside of it right? Wrong. VCR tapes and laser discs are stored in standard NTSC composite video format. Take for example the original cabinet game "Dragon’s Lair." It was quite an expensive cabinet to build speaking in terms of hardware. The CRT was RGB, but the expensive laser disc player was composite video out. One more additional piece of hardware (and probably the most expensive) was a converter for doing the exact same thing I am looking for: <B>A composite to RGB converter. </B>Unfortunately, I can’t find any old Dragon’s Lair cabinets that either work or are reasonable in price so I skipped that method of obtaining one.</P>
+<P>I started searching the web for the keyword, "VGA2TV." I found several companies selling hardware converters which all seemed useless except for those really expensive ones I mentioned earlier. One hit was a homemade circuit by <B>Tomi Engdahl</B>. Tomi has several homemade circuits on his page </FONT><A HREF="http://www.hut.fi/Misc/Electronics/circuits/"><FONT FACE="Comic Sans MS">Tomi Engdahl's electronics circuits and documents</FONT></A><FONT FACE="Comic Sans MS">. Tomi documents several specs about computer monitors, NTSC CRT’s, and PAL CRT’s. So I read a lot of his information and tried to digest it.</P>
+<P>One of his diagrams had the pinouts of a VGA cable. He pointed out that the voltage for VGA and RGB CRT signals are the same at 0.7 VPP (volts peak-to-peak.) Interesting. I don’t like to do a "farmer’s job" on anything because it just doesn’t last so I went and blew $52 on a special shielded VGA to RGB cable with 5 BNC (coaxial) connectors used for high-end monitors which accept RGB input. OK. All my hardware should be running at 60Hz seeing that I live in Canada so I don’t have to build any circuits to convert the frequency. (Not that I would know how to do this anyway. My knowledge is quite limited besides hooking up wires, lights, and buttons in a circuit.) The RGB signals from the JAMMA (Japanese Arcade Machine Manufacturers Association) board should be 0.7V as well as the VGA RGB pins and the RGB inputs of the CRT. I’ll explain the JAMMA standard later under the "harness" section.</P>
+<P>I spliced the VGA cable’s BNC connectors to the RGB connectors on the JAMMA socket which run directly to the CRT. Nothing but "flicka-flacka" on the screen. Disappointing to say the least. There are five BNC leads on the VGA cable. Red, Green, Blue, H-Sync, and V-Sync. The BNC connectors also each have ground connectors. I didn’t know if this meant –12V ground, -5V ground, or just plain ground! So I assumed that the CRT’s five leads were the same. I already knew where the red, green, blue, h-sync, and v-sync leads were because of the Street Fighter II manual which listed the pinouts of the JAMMA board. Why didn’t it work? Argh!</P>
+<P>Tomi had an article about combining h-sync and v-sync signals into one composite-sync signal. So possibly this was what I needed to do. Maybe the fifth lead for the CRT was ground and not a single h-sync or v-sync. OK. So Tomi being the thorough guy he is sported a diagram of a circuit which combined the two separate syncs into one. He included all of the necessary components by name, model, and manufacturer so any idiot could build it. So I spent an afternoon at an electronics reseller outlet in town here. Terry came with me and I managed to spend about $100 on assorted IC’s, capacitors, resistors, and transistors as well as some compressed air and contact cleaner so we could read the etched words in the tube which were encrusted with dust and grime from years in various arcades. I borrowed Terry’s "breadboard" which allows one to test components and build circuits without actually having to solder them together. Terry just drank all my beer, once again, and went home. So after about an hour of putting this thing together and checking it a few times to make sure I wasn’t gonna blow anything up. (The CRT uses 30,000V+ in its high-voltage power supply. I don’t wanna be around if something screws up!)</P>
+<P>With a big smile on my face I connected the circuit up with alligator clips, stood back for fear of CRT implosion, and plugged her in. As I walked around to the front of the machine to see what I could see on the tube my face went from a grin to a grimace. The picture was twice as bad with "flicka-flacka" as it was before! "Tomi. What are you talking about, man!?" So being quite distraught, I left it alone for a few days to give me time to think.</P>
+<P>Next Saturday morning I threw all caution to the wind by ripping out the breadboard, and shorting the h-sync and v-sync leads together to see what would happen. Walla. Well, not quite, but it was close! The computer was in 80x25 text mode and I could see it. Two problems though:</P>
+<OL>
+
+<LI>The picture was doubled, that is two images of the same thing were beside each other horizontally.</LI>
+<LI>The picture was very dim. I had to shut off the lights to be able to read it.</LI></OL>
+
+<P>I got the bright idea to fiddle around with the potentiometer control knobs on the back of the tube. I was reluctant to touch them because of the fact that on my CRT the potentiometers point straight up into the guts of the CRT where that damn 30,000V lives and kills. (Kills you, that is.) So I went back to the electronics store to obtain one of those plastic television screwdrivers used to do exactly what I wanted to do. They didn’t have any. If they don’t have any where the hell are you supposed to get one? After talking to the brainless employees who were electronics students I was quite confused and perplexed. I didn’t know how the hell these things worked I just knew which process I had to achieve to make my CRT display Pacman on the screen! I’d never even been to an electronics store in about 15 years prior to the previous visit. An older gentleman overheard my dilemma and explained that Sony or somebody made this mythical microchip (or IC) which converted composite to RGB. Great. "Thanks, old man." I just wished he had taken a shower sometime that week after talking with him. The students couldn’t shed anymore light on this either.</P>
+<P>OK. So I fashioned a plastic screwdriver by bending the tip of a plastic knife at 90 degrees to avoid my hand touching the CRT chassis. The blade was only one-sided so I had to bend it back the other way when my hand came close to that damn chassis again. I figured that I could use the "H-Phase" adjustment to correct the double image. I was at a "catch 22" because while you’re standing behind the tube, you obviously can’t see what’s happening to the picture. So I got smart and put a mirror up on the other side of the game, precariously balanced on my bar. Two problems though, the picture was so dim that I had to shut off the lights to see anything, and the mirror hadn’t been "windexed" in about three years. Luckily my sister, Kathi, and her foster daughters showed up and I quickly served them beverages and pleaded for Kathi to help me with this. I was close and I didn’t want to stop now to entertain my guests. So I gave the girls a few smokes and cranked up some alternative music for them in my dart room and they were happy. I ushered Kathi to stare at the screen while I poked around aimlessly with the back of it in the pitch dark. Of course by now, my basement looked like a tornado had touched down only in my basement because I had wires, tools, soldering irons, Terry’s electronic components, arcade buttons, and all kinds of other crap strewn all over the place, including the floor. Those plugged-in soldering irons hurt when you step on them, you know. Anyway, we couldn’t get it to "un-double" the display. Also, the other graphics screen modes would not display without "flicka-flacka" either. At this point my plastic knife snapped from too many bends anyway and I shut the stupid thing off.</P>
+<P>After a couple of beers I went back to Tomi’s site to read some more. I had missed a point which said that a VGA2TV driver was needed. "Software? How could that be? Alright." So I downloaded Tomi’s VGA2TV DOS driver </FONT><A HREF="downloads/vga2tv06.zip"><FONT FACE="Comic Sans MS">VGA2TV06.ZIP</FONT> </A><FONT FACE="Comic Sans MS">and found a whole other mess of other drivers of this nature for DOS, Windows 3.1, and Windows 95. The only thing was that they were all created back in the early 1990’s and updates were dropped because of external converters, etc. I downloaded his program and tried it out. This was a big pain in the ass seeing that I had to keep switching between an SVGA monitor and the CRT and the fact that my system didn’t have a floppy drive. Anyway, after modifying the AUTOEXEC.BAT file with his DOS TSR (terminate and stay resident program) I hooked the CRT back up and rebooted the system. Perfect. Almost. Still dim, but I could see a single picture rolling on the screen. After fiddling with the controls a little more I got the vertical hold right, and turned up the brightness which just basically increases the voltage to the red, green, and blue cathodes. Now it was perfect.</P>
+<P>Tomi’s driver worked well for basic low-res graphics modes and text modes, but only had support for 640x480 @ 256 colours for Cirrus chipsets only. That’s okay because I happened to be using a CL5446 2MB PCI video card anyway. But there was no 800x600 support or support for other chipsets. Tomi’s specs are here: </FONT><A HREF="downloads/vga2tv.txt"><FONT FACE="Comic Sans MS">VGA2TV.TXT</FONT></A><FONT FACE="Comic Sans MS"> Tomi’s driver was the best I found out of all the other drivers mentioned above, until I found a link on his page to </FONT><A HREF="http://www.geocities.com/SiliconValley/Horizon/7694/"><FONT FACE="Comic Sans MS">Paulo Sergio Coelho</FONT></A><FONT FACE="Comic Sans MS">’s VGATV driver </FONT><A HREF="downloads/vgatv98085.zip"><FONT FACE="Comic Sans MS">VGA2TV98085.ZIP</FONT></A><FONT FACE="Comic Sans MS"> which works for multiple chipsets, supports up to 1280x1024 for NTSC and 1600x1200 for PAL at 256 colours. It supports Cirrus Logic, Oak, Tseng Labs, and Trident cards. All the cheapies. Great! Paulo is still developing his driver from time to time in-between projects. This last release is from March 1998. Paulo has put a great effort towards this driver and seems to be the only source for this particular implementation. If you like the results of this driver then let Paulo know so he continues his development of his driver. </P>
+<P>After a little more tweaking on Terry’s part of centering the picture, etc. (using his fingers in the CRT) we had a working display for the PC guts. Awesome.</P>
+</FONT><P><IMG SRC="graphics/new.gif" WIDTH=64 HEIGHT=32><FONT FACE="Comic Sans MS">Sep 9, 1998 - After success I built a little circuit to shove into the JAMMA socket in order to connect the CRT without cutting or "un-soldering" any original cabinet wires. It's just a board with 5 MALE BNC connectors to attach to the VGA2RGB cable. Simple to replace and remove. It would take to much time and bother to provide schematics. It's simpler just to explain that there is no circuitry, really. It's just a connector to bridge the RGB cable, and the CRT.</P>
+</FONT><P><A HREF="pics/jamma_circuit.jpg"><IMG SRC="pics/jamma_circuit.gif" BORDER=0 WIDTH=105 HEIGHT=80 ALT="JAMMA/RGB Circuit"></A></P>
+<FONT FACE="Comic Sans MS"><P>There are some other ideas I have on doing this instead of using my current method:</P>
+<OL>
+
+<LI>I’m still trying to find Sony’s infamous composite to RGB chip, I’ve found ones which are similar but not quite right so far.</LI>
+<LI>ATI recently announced their new ImpacTV2 PC2TV video card line which supports the original composite &amp; S-Video connectors as well as a new RGB "Scart" connector. (See Tomi’s home page for more info on Scart.)</LI></OL>
+
+</FONT><P><IMG SRC="graphics/new.gif" WIDTH=64 HEIGHT=32><FONT FACE="Comic Sans MS">Nov 8, 1998 - Forget the ATI Scart method.  ATI has denied several times that it exists even though a diagram is included on mine, and their documentation states that it is included with the PAL models.</P>
+</FONT><P><IMG SRC="graphics/new.gif" WIDTH=64 HEIGHT=32><FONT FACE="Comic Sans MS">Sep 4, 1998 - Correction on Windows with VGATV driver. Worked with Windows 3.1 and Windows for Workgroups 3.11 using <B>only</B> standard Windows VGA (16 color) driver.</P>
+<P>ATI has not yet confirmed the release of this ImpacTV2 video card technology to me yet. But I will update as soon as I know more. Same goes for the Sony chip. If anyone has any new information regarding any of this please let me know. Thanks.</P>
+</FONT><P><IMG SRC="graphics/new.gif" WIDTH=64 HEIGHT=32><FONT FACE="Comic Sans MS">Sep 4, 1998 - A new way of connecting your original CRT has emerged. Check it out at </FONT><A HREF="http://www.crl.com/~saint/arcade.htm"><FONT FACE="Comic Sans MS">Saint's Site!</FONT></A><FONT FACE="Comic Sans MS"> under </FONT><A HREF="http://www.crl.com/~saint/arcade_puttogether.htm"><FONT FACE="Comic Sans MS">"Assembly"</FONT></A></P>
+<P><IMG SRC="graphics/new.gif" WIDTH=64 HEIGHT=32><FONT FACE="Comic Sans MS">Sep 9, 1998 - Forget the STB method mentioned in the above paragraph. They should have called it "STD" because it's such a disgusting video card! It only has Win95 and WinNT drivers. (No DOS VESA stuff) It only really supports 640x480, and text modes and that's it! The picture was blurry, shaky, fuzzy, and pixels were cut out altogether. The only benefit of the thing is that you can access the CMOS because you can see the display prior to loading a VGA2TV TSR in AUTOEXEC.BAT as in my method. Other than that, the picture was so dim that I couldn't even compensate by cranking the brightness level of the CRT up to full! $140 down the drain! Anybody wanna buy a brand new STB PCI TV Video card?</P>
+</FONT><P><IMG SRC="graphics/new.gif" WIDTH=64 HEIGHT=32><FONT FACE="Comic Sans MS">Oct 12, 1998 - Went and picked up a used 21" monitor style TV for $75 CDN.  The only problem with it was the cable connector was busted off but the composite input connector was still functional.  Fine.  All I wanted to use it for was to hook up to my ATI PC2TV card for good scaling, Win32 access, etc.  Yuck!  The picture is just awful with composite when you're 2 feet in front of the thing.  Ugh!  Blurry, color bleeds, shaky, gross picture.  Forget this.</P>
+</FONT><P><IMG SRC="graphics/new.gif" WIDTH=64 HEIGHT=32><FONT FACE="Comic Sans MS">Nov 8, 1998 - I'm eating crow…  After receiving an e-mail regarding STB Velocity 128 NTSC TV video cards, I tried using this method one more time out of curiosity.  It's true, that I would be able to use Win9x and NT but I just hated the picture using the STB vs. the "Cirrus Logic via software driver" method.  The CL5446 card produced the best color and the sharpest image out of all of the cards I tried.  Which cards did I try?  (In no particular order)  Cirrus Logic GD54xx PCI, Trident PCI (not sure which one, don't care really since Trident's suck), Matrox Mystique 220 PCI, ATI All-In-Wonder Pro (Rage Pro), ATI Graphics Pro Turbo (Rage II+), and of course the STB Velocity 128 NTSC TV PCI card.</P>
+<P>At first glance, the STB was way off-center, shaky, and every so many horizontal lines were cut completely from the picture.  (i.e. you couldn't see some of the horizontal lines in vector games because they would be completely "cut-out" by the card.)  So, I tried it again anyway.  The major problem was that I had adjusted the CRT controls on the tube so much for the Cirrus Logic card that it was way out of sync for the STB card.  All video cards have slightly different output frequencies.  So after fiddling with the controls a bit more, I got a fairly centered, stable picture.  Same problem that I bitched about before though, the picture/colors were still not as crisp or bright as with the CL card.  OK.  Even after adjusting the brightness, contrast, RGB drives, and RGB cutoffs it still wasn't as good as before, but at least it ran Win95 and also scaled 320x200 mode closer to the corners.  Still had that horizontal line "cut" thing happening though.  A real pain in the ass.  Under Windows this wasn't a problem as the Win9x drivers compensated by "blending" the pixels together.  It makes the picture a little more blurry, but at least you can read every piece of text in Windows.  Still had the problem under DOS mode, though.</P>
+<P>&nbsp;</P>
+<P>I guess some good came out of this "horizontal line problem" though:</P>
+<OL>
+
+<LI>The card seems to be able to "cram" more rows of pixels into the picture, and seems to allow a little more than 480 lines, vertically.  i.e.  With the CL card, I could get 640x480 but could not see enough of the play area on Time Pilot to let me view both my score at the top and the number of planes I had left at the bottom.  I always had to use -NODOUBLE or settle for losing one statistic or the other.  With the STB card, it seems to add a few more rows allowing you to see most of your score, and a portion of the plane icons so you can see both, not entirely, of course, but good enough.  I'd rather have a big screen and less stats than a tiny screen and lots of stats I can't read because they're too small!  With a little bit of tweaking with MAME switches like -SKIPLINES -17 and so on, I managed to "fine tune" all of the games to fit one way or another with the exception of Galaga and one other I can't think of right off the top of my head.  They both had to have -NODOUBLE because they were just too damn long to play properly, stats or no stats.</LI>
+<LI>Under Windows the color blending is better, so most (and I stress "most") DirectX games will work for you since they allow 320 and 640 modes which fit the best with NTSC tubes, anyway.  So you may want to try MAME32 emulation for MAME vs DOS MAME.  I still prefer the DOS stuff better because of my own software-based interface with my QuickMAME Launcher, and all the other crap I painstaking compiled to make my system work smoothly with limited controls.  (i.e. no keyboard.)</LI></OL>
+
+<P>You've got to remember that NTSC is basically 640x480.  The CRT is never to change its frequency to fit 800x600 modes, etc. like your monitor will.  Why?  Because the CRT is a "fixed-frequency" monitor.  So, you're left trying to stuff every game into either a 320x200, 320x240, or a 640x480 space.  Sorry, I don't think there's really any way to get around this.  That means that MAME NTSC (not CRT NTSC) resolution games like Pacman, Galaga, Donkey Kong, etc. that use 224x288 modes will never fir properly even with the -DOUBLE switch.</P>
+<P>Now, some games want to automatically set the video mode to 800x600 or 1024x768.  The card simply won't handle this properly.  These modes (unlike the TSR method which centers every modes whether underscanned or overscanned) get overscanned past the right and bottom boundaries of the screen.  That is, you can see the left-most and top-most Discs Of Tron screen, but it's truncated at the right and the bottom.  To correct this, you must define the "resolution" setting in MAME.CFG to "resolution=640x480" instead of "resolution=auto".  Also, you should set "double=yes" from "double=no" or "double=auto" since most games are low-res based.  This way, you only have to add custom switches for a few high-res games like DOTRON, Timber, Punchout, etc.  (Get my QuickMAME Launcher to make life simpler under the "Downloads" section.  QM.ZIP)</P>
+<P>I guess another solution is to get a 21" monitor.  But don't waste the money if you can live with the CRT NTSC limitations.  The original CRT really produces a nice nostalgic picture.  It almost fools you into thinking you're playing the real thing.  SVGA monitors are too crisp, and look too good to be in an arcade cabinet.  "Those are my thoughts, not yours!"</P>
+</FONT>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=666>
+<TR><TD WIDTH="15%" VALIGN="TOP">
+<P>&nbsp;</TD>
+<TD WIDTH="28%" VALIGN="TOP">
+<B><FONT FACE="Comic Sans MS"><P>DOS NTSC/PAL TSR (Original) Method</B></FONT></TD>
+<TD WIDTH="28%" VALIGN="TOP">
+<B><FONT FACE="Comic Sans MS"><P>PC2TV Video Cards with a TV for output</B></FONT></TD>
+<TD WIDTH="28%" VALIGN="TOP">
+<B><FONT FACE="Comic Sans MS"><P>STB Velocity NTSC TV (Latest) Method</B></FONT></TD>
+</TR>
+<TR><TD WIDTH="15%" VALIGN="TOP">
+<I><FONT FACE="Comic Sans MS"><P>Price</I></FONT></TD>
+<TD WIDTH="28%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>About $50 CDN for a Cirrus Logic card</FONT></TD>
+<TD WIDTH="28%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>~$185 for a good multi-res PC2TV card plus the cost of a TV</FONT></TD>
+<TD WIDTH="28%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>About $140</FONT></TD>
+</TR>
+<TR><TD WIDTH="15%" VALIGN="TOP">
+<I><FONT FACE="Comic Sans MS"><P>Mode Support</I></FONT></TD>
+<TD WIDTH="28%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>All Text modes, 320x200, 640x400, 640x480, 800x600, 1024x768, 1280x1024 (Limit of 8-bit colour) via driver</FONT></TD>
+<TD WIDTH="28%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>All VESA 2.1 modes including modes to the left, 320x240, 400x300, 512x384 (In any colour depth)</FONT></TD>
+<TD WIDTH="28%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>320x2??, 640x4??, (In any colour depth)</P>
+<P>And most DirectX modes.</FONT></TD>
+</TR>
+<TR><TD WIDTH="15%" VALIGN="TOP">
+<I><FONT FACE="Comic Sans MS"><P>Clarity</I></FONT></TD>
+<TD WIDTH="28%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Excellent. No RGB conversion.</FONT></TD>
+<TD WIDTH="28%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Some colour and/or signal distortion with multiple conversions.</FONT></TD>
+<TD WIDTH="28%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Good.  No RGB conversion.  A little duller than the first method.</FONT></TD>
+</TR>
+<TR><TD WIDTH="15%" VALIGN="TOP">
+<I><FONT FACE="Comic Sans MS"><P>Scaling (NTSC)</I></FONT></TD>
+<TD WIDTH="28%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>~525 lines in NTSC display so 320x200 and 640x480 display well. 800x600 is overscanned beyond the viewable area of the screen.</FONT></TD>
+<TD WIDTH="28%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Scaling is much better due to extra VESA modes and PC2TV cards output NTSC frequency already. No need for driver.</FONT></TD>
+<TD WIDTH="28%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Pretty much limited to the modes listed above.  Scaling is a little better for 320x200 mode.</FONT></TD>
+</TR>
+<TR><TD WIDTH="15%" VALIGN="TOP">
+<I><FONT FACE="Comic Sans MS"><P>Scaling (PAL)</I></FONT></TD>
+<TD WIDTH="28%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>~625 lines in PAL display so 320x200 &amp; 640x480 are shrunk, but 800x600 fits well. 1024x768 is overscanned.</FONT></TD>
+<TD WIDTH="28%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Scaling is much better due to extra VESA modes and PC2TV cards output PAL frequency already. No need for driver.</FONT></TD>
+<TD WIDTH="28%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Scaling is much better due to extra VESA modes and PC2TV cards output PAL frequency already. No need for driver.</FONT></TD>
+</TR>
+<TR><TD WIDTH="15%" VALIGN="TOP">
+<I><FONT FACE="Comic Sans MS"><P>Memory</I></FONT></TD>
+<TD WIDTH="28%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Obviously loading TSR’s is going to take up some memory. About 11K of conventional for Paulo’s driver. Also, may need some additional card-specific VESA drivers for frame buffering, etc.</FONT></TD>
+<TD WIDTH="28%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>No TSR’s needed</FONT></TD>
+<TD WIDTH="28%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>No TSR’s needed.</FONT></TD>
+</TR>
+<TR><TD WIDTH="15%" VALIGN="TOP">
+<I><FONT FACE="Comic Sans MS"><P>Scitech Display Doctor</I></FONT></TD>
+<TD WIDTH="28%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Screws up Paulo’s driver by adding unsupported modes like 400x300 which are not controlled by the driver.</FONT></TD>
+<TD WIDTH="28%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Not necessary for VESA 2.1 compliant cards.</FONT></TD>
+<TD WIDTH="28%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Adds a bunch of extended VESA modes that you can't get centered properly, shaky, etc.  Don't use SDD.</FONT></TD>
+</TR>
+<TR><TD WIDTH="15%" VALIGN="TOP">
+<I><FONT FACE="Comic Sans MS"><P>Operating System</I></FONT></TD>
+<TD WIDTH="28%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Works in DOS &amp; Windows 3.1x Standard VGA mode.</FONT></TD>
+<TD WIDTH="28%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>The card should come with Windows 95 drivers and be supported under DOS through the BIOS as with ATI PC2TV cards.</FONT></TD>
+<TD WIDTH="28%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>The card should come with Windows 95 drivers and be supported under DOS through the BIOS.</FONT></TD>
+</TR>
+<TR><TD WIDTH="15%" VALIGN="TOP">
+<I><FONT FACE="Comic Sans MS"><P>Pros</I></FONT></TD>
+<TD WIDTH="28%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>- Excellent picture</FONT></TD>
+<TD WIDTH="28%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>- Good scaling</P>
+<P>- Runs Win9x/NT</FONT></TD>
+<TD WIDTH="28%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>- Fairly good picture</P>
+<P>- Runs Win9x/NT</FONT></TD>
+</TR>
+<TR><TD WIDTH="15%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Cons</FONT></TD>
+<TD WIDTH="28%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>- No Win9x/NT support yet</P>
+<P>- No scaling</FONT></TD>
+<TD WIDTH="28%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>- Lousy picture.</P>
+<P>- Need a TV or some sort of composite -&gt; RGB converter for CRT.</FONT></TD>
+<TD WIDTH="28%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>- Limit of 640x480 with screen modes.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT FACE="Comic Sans MS"><P>&nbsp;</P>
+<P>Obviously the PC2TV method is the best for scaling. It will always fit the mode into the screen properly for any text/graphics mode up to 800x600 at <B>any </B>colour depth.</P>
+<P>&nbsp;</P>
+<P>Terry drank the rest of my beer but was quite excited to try out Battle Zone and Xevious and did help me quite a bit with this, in fact. Thanks, Terry.</P></FONT></BODY>
+</HTML>

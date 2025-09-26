@@ -1,0 +1,21 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>The Cabinet</TITLE>
+</HEAD>
+<BODY TEXT="#ffff00" LINK="#ffff00" VLINK="#c0c0c0" bgproperties="fixed" BACKGROUND="graphics/classic.jpg">
+
+<B><FONT FACE="Comic Sans MS"><P>The Harness</P>
+<P><IMG SRC="graphics/boxwalk.gif"></P>
+</B><P>All newer arcade machines use a board standard called "JAMMA" (Japanese Arcade Machine Manufacturers Association.) Luckily mine uses this JAMMA standard. It’s not imperative that you know what JAMMA is or does exactly, but I utilized the JAMMA socket to make my own interface board. This way I can always connect the original Street Fighter II board back to the socket and have it work. (i.e. I did not rip the guts out of my machine.) I prefer everything to be done modularly vs. the "farmer’s job" approach. It makes it easy to disassemble and replace defective parts if something goes wrong. The thing is, if it’s done right the first time, you shouldn’t have any future problems other than components frying from old age or overuse.</P>
+<P>The harness(es) connect(s) all of the circuitry in the system (joysticks, buttons, CRT, low-voltage power supply) to the JAMMA board in the system.</P>
+<P>The JAMMA board has 28 pins per side. (56 in all.) This is a diagram of a JAMMA board:</P>
+</FONT><P ALIGN="CENTER"><A HREF="graphics/jamma.gif"><IMG SRC="graphics/jamma.gif" BORDER=0 WIDTH=576 HEIGHT=432 ALT="JAMMA Pinout"></A></P>
+<FONT FACE="Comic Sans MS"><P>&nbsp;I couldn’t find a 56-pin board which fit the socket at the electronics place, but I did find a board which had about 32 pins in Terry’s old electronics bucket which was sufficient.  Basically all I needed was the speaker and video connectors to be wired up to my own board to interface it to the VGA/RGB cable and my sound card.  This was a little more work than just splicing the speaker and CRT wires, but it is very easy to remove and replace with the extra bit of effort added.</P>
+<P>Basically the board consists of 5 BNC male connectors for the VGA/BNC cable, a small stereo microphone jack to accept sound input from the sound card, and a small switch to go from mono to stereo for the speakers.  This was necessary as my game has four speakers, but all are wired mono.  I split the wires from the speakers and added an extra pin on my board and the JAMMA socket which was previously unused.  Pin 11, I think.  This way I can flip to stereo for the sound card, or flip back to mono for reconnecting the original JAMMA board.</P>
+<P>If you don’t want to go to all the trouble then just splice the wires.  I swear the picture is way better though using the proper BNC connectors to attach them since the ground leads are still shielding the signals.</P>
+<P>Basically I just discarded the buttons on the board because JAMMA only supports 3 buttons per player, natively.  The other three were wired in on a separate board by the technician who originally set it up.  Seems silly not to have more button support when all of those unused JAMMA connectors are just sitting there being useless.  (See above diagram.)  Oh well.</P>
+<P>Again, PC joysticks just seemed like a waste of time to use on the system (due to the lack of button support) so I opted to wire the buttons directly to the keyboard instead.  Besides, you pretty much need ESC, ENTER, P, RESET, Q, Y, etc. for all games and there just simply aren’t enough buttons even though my machine came with 14 buttons and 2 joysticks, originally.  This way you don't have to destroy any PC joysticks or gamepads, either.</P>
+<P>This proved to be the next big challenge.  See the &quot;Controls&quot; section.</P></FONT></BODY>
+</HTML>

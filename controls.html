@@ -1,0 +1,272 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>Controls</TITLE>
+
+</HEAD>
+<BODY TEXT="#ffff00" LINK="#ffff00" VLINK="#c0c0c0" bgproperties="fixed" BACKGROUND="graphics/classic.jpg">
+
+<B><FONT FACE="Comic Sans MS"><P>Controls</P>
+</B></FONT><P><IMG SRC="graphics/pacrun.gif" WIDTH=97 HEIGHT=93></P>
+<B><FONT FACE="Comic Sans MS"><P>The Keyboard - Another tough one!</P>
+</B><P>After several experimentation with various joysticks like Gravis Gamepad, Gamepad Pro, analog joysticks, and joystick emulators like JOYEMU from Simone Zanella I finally came to the conclusion that I would simply wire a standard PC keyboard to the controls. Easy enough, right? Wrong!</P>
+<P>First off, the joysticks are okay, but really you have to hack up one or two or them in the first place. Joysticks and PC joystick ports are still based on IBM's original XT model which came with an analog joystick.  So to build your own joystick circuit is somewhat complicated even if you just want digital output like a gamepad.  It requires several resistors, etc. and basically it just easier (and probably about the same price once you're done) to just hack up a couple of cheap gamepads and wire them to your keyboard.</P>
+<P>Of course, this whole XT compatibility thing leads to these facts:</P>
+<OL>
+
+<LI>If you use only one joystick/gamepad you are limited to 4 buttons using joystick input.</LI>
+<LI>If you use two joysticks/gamepads you are limited to only 2 buttons per player using joystick input.</LI></OL>
+
+<P>&nbsp;</P>
+<P>So joystick/gamepad interface is probably not too good of a solution if you want to play games which require more buttons.  Of course there are other gamepads which offer more buttons like the MS-Sidewinder, Gravis Gamepad Pro, etc.  All of these use a DOS TSR or a Windows 95 program to generate keystrokes instead of actual joystick impedances.  Which is fine, unless:</P>
+<OL>
+
+<LI>Your joystick isn't supported by your operating system.</LI>
+<LI>Works under Windows 95 but not DOS or vice versa.</LI>
+<LI>The software/game does not support your joystick.</LI>
+<LI>The keystroke program doesn't work under a certain game.</LI></OL>
+
+<P>&nbsp;</P>
+<P>So what's the only common interface between all of the games?  The keyboard!</P>
+<P>OK.  So to provide the most compatibility with your games, you will probably want to choose the default MAME action buttons and controls since the number of MAME ROMs will probably outnumber all the other games combined on your system about 20:1.  Alright.  So it's easier to assign CTRL, ALT, SPACE, LSHIFT, Z, and X to the six action buttons of player 1 than to reprogram/customize every bloody MAME game on your system to accept alternate keys.  Except ALT, SPACE, and LSHIFT don't work with some emulators like the Bloodlust emulators --- Genecyst, NESticle, and Callus.  Instead, I've opted to use C, V, B, and N instead in place of MAME's four defaults CTRL, ALT, SPACE, LSHIFT leaving the rest as MAME defaults.</P>
+<P>Now, in planning the control panel I simply planned to use the default MAME key set which looks like this:</P>
+</FONT>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=427>
+<TR><TD WIDTH="31%" VALIGN="TOP">
+<B><FONT FACE="Comic Sans MS"><P>Set</B></FONT></TD>
+<TD WIDTH="32%" VALIGN="TOP">
+<B><FONT FACE="Comic Sans MS"><P>Control</B></FONT></TD>
+<TD WIDTH="37%" VALIGN="TOP">
+<B><FONT FACE="Comic Sans MS"><P>Keyboard Mapping</B></FONT></TD>
+</TR>
+<TR><TD WIDTH="31%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Player 1</FONT></TD>
+<TD WIDTH="32%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Up</FONT></TD>
+<TD WIDTH="37%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Grey Up Arrow</FONT></TD>
+</TR>
+<TR><TD WIDTH="31%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="32%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Right</FONT></TD>
+<TD WIDTH="37%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Grey Right Arrow</FONT></TD>
+</TR>
+<TR><TD WIDTH="31%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="32%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Down</FONT></TD>
+<TD WIDTH="37%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Grey Down Arrow</FONT></TD>
+</TR>
+<TR><TD WIDTH="31%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="32%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Left</FONT></TD>
+<TD WIDTH="37%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Grey Left Arrow</FONT></TD>
+</TR>
+<TR><TD WIDTH="31%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="32%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Action 1</FONT></TD>
+<TD WIDTH="37%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>C</FONT></TD>
+</TR>
+<TR><TD WIDTH="31%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="32%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Action 2</FONT></TD>
+<TD WIDTH="37%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>V</FONT></TD>
+</TR>
+<TR><TD WIDTH="31%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="32%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Action 3</FONT></TD>
+<TD WIDTH="37%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>B</FONT></TD>
+</TR>
+<TR><TD WIDTH="31%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="32%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Action 4</FONT></TD>
+<TD WIDTH="37%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>N</FONT></TD>
+</TR>
+<TR><TD WIDTH="31%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="32%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Action 5</FONT></TD>
+<TD WIDTH="37%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Z</FONT></TD>
+</TR>
+<TR><TD WIDTH="31%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="32%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Action 6</FONT></TD>
+<TD WIDTH="37%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>X</FONT></TD>
+</TR>
+<TR><TD WIDTH="31%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Player 2</FONT></TD>
+<TD WIDTH="32%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Up</FONT></TD>
+<TD WIDTH="37%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>R</FONT></TD>
+</TR>
+<TR><TD WIDTH="31%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="32%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Right</FONT></TD>
+<TD WIDTH="37%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>G</FONT></TD>
+</TR>
+<TR><TD WIDTH="31%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="32%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Down</FONT></TD>
+<TD WIDTH="37%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>F</FONT></TD>
+</TR>
+<TR><TD WIDTH="31%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="32%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Left</FONT></TD>
+<TD WIDTH="37%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>D</FONT></TD>
+</TR>
+<TR><TD WIDTH="31%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="32%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Action 1</FONT></TD>
+<TD WIDTH="37%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>A</FONT></TD>
+</TR>
+<TR><TD WIDTH="31%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="32%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Action 2</FONT></TD>
+<TD WIDTH="37%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>S</FONT></TD>
+</TR>
+<TR><TD WIDTH="31%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="32%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Action 3</FONT></TD>
+<TD WIDTH="37%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Q</FONT></TD>
+</TR>
+<TR><TD WIDTH="31%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="32%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Action 4</FONT></TD>
+<TD WIDTH="37%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>W</FONT></TD>
+</TR>
+<TR><TD WIDTH="31%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="32%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Action 5</FONT></TD>
+<TD WIDTH="37%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>T</FONT></TD>
+</TR>
+<TR><TD WIDTH="31%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="32%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Action 6</FONT></TD>
+<TD WIDTH="37%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Y</FONT></TD>
+</TR>
+<TR><TD WIDTH="31%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Other Controls</FONT></TD>
+<TD WIDTH="32%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Player 1 Start</FONT></TD>
+<TD WIDTH="37%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>1</FONT></TD>
+</TR>
+<TR><TD WIDTH="31%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="32%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Player 2 Start</FONT></TD>
+<TD WIDTH="37%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>2</FONT></TD>
+</TR>
+<TR><TD WIDTH="31%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Miscellaneous</FONT></TD>
+<TD WIDTH="32%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Enter</FONT></TD>
+<TD WIDTH="37%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>ENTER</FONT></TD>
+</TR>
+<TR><TD WIDTH="31%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="32%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Escape</FONT></TD>
+<TD WIDTH="37%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>ESC</FONT></TD>
+</TR>
+<TR><TD WIDTH="31%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="32%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Tab</FONT></TD>
+<TD WIDTH="37%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>TAB</FONT></TD>
+</TR>
+<TR><TD WIDTH="31%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="32%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Pause</FONT></TD>
+<TD WIDTH="37%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>P</FONT></TD>
+</TR>
+<TR><TD WIDTH="31%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="32%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Left Coin</FONT></TD>
+<TD WIDTH="37%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>3</FONT></TD>
+</TR>
+<TR><TD WIDTH="31%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="32%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>Right Coin</FONT></TD>
+<TD WIDTH="37%" VALIGN="TOP">
+<FONT FACE="Comic Sans MS"><P>4</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT FACE="Comic Sans MS"><P>&nbsp;</P>
+<P>I wasn't sure how this was going to work with everything else, exactly, but I assumed that the other emulators and games would have a keyboard remapping function to customize controls.  You see, other emulators besides MAME have global settings which can be modified through the GUI, or some sort of configuration file like SYSTEM16.INI.  This way, you can change the inputs for a series of games with one setting change.  MAME works differently in that each game is unique and had unique hardware.  So each ROM has to be configured individually as opposed to just once for any other emulator.  Get it?</P>
+<P>Alright, now the deal is…  originally I was just going to use the original JAMMA socket to interface to my homemade JAMMA board (see harness section) so as not to destroy the original wiring and to be able to connect the original hardware again by just swapping the socket with my board vs. the original Street Fighter II JAMMA board.</P>
+<A HREF="pics/panel.jpg"><IMG SRC="pics/panel.gif" ALT="Control Panel"></A>
+<P>Fat chance of that though.  You see the JAMMA board is built simply by using one common lead and single, sepearate leads for each control/button.  After ripping apart my keyboard with a bad "M" key I noted that PC keyboards don't work this way.  My keyboard (they all seem to be a little bit different inside) happened to have a 13x13 grid.  That is 13^2 combinations, or 169 keyboard combinations.  Plenty for those 104-Enhanced keyboard specs.  What a drag.  Alright.  "So just solder the wires to the template under the keys," you say?  Can't.  They are all plastic underneath.  You'll just end up melting the plastic and ruining a perfectly good keyboard.  So you'll have to solder directly to the IC board.</P>
+<P>What all this means is that you will have to do the following:</P>
+<OL>
+
+<LI>Tear apart your keyboard.</LI>
+<LI>Locate the IC unit.</LI>
+<LI>If the IC unit has no way of connecting wires to it then put it back together and get a different model.  Don't destroy it trying.  It's futile.  Believe me.</LI>
+<LI>Use a multi-meter with resistance measuring or an ohmmeter to test continuity between the foil leads on the template and the IC.</LI>
+<LI>Mark one end of the IC board pins as 1 and start writing down on a piece of paper which two leads comprise any given key on the keyboard.  (i.e. "Pin 1" and "Pin 20" could make up the ESC key on your keyboard.)  Don't be stupid like me and write it all down, solder everything together, and then misplace the treasured piece of paper you wrote the values down on.  You'll need it later to troubleshoot if you have trouble.  Not that I have had trouble to date with it, but I did try an experiment on it recently which I'll explain later.  Now I've got to go back to the "drawing board" to re-solder about 10 keys back into the control panel.  "Where's that damn piece of paper?"</LI></OL>
+
+<P>&nbsp;</P>
+<P>You probably realize by now that you could end up with several combinations.  Some will have common leads if they are in the same physical region of the keyboard.  (i.e. the "3" and "4" keys happen to share a common lead.)  Also, I would recommend buying one male DB-25 connector and one female DB-25 connector.  This allows you to wire the keyboard IC unit to the female connector, as to not short the keyboard leads out on anything metal.  (Because there are no penis' on a female connector, dummy.)  And use the male connector to interface to the control panel.  This way, you can disconnect the control panel if you have a problem.  Yes, it makes three times the number of soldering points over just wiring directly to the control panel from the keyboard IC board, but if you're gonna do it, do it right so you won't have problems and can troubleshoot easier.  Again, DON'T do a farmer's job!</P>
+<A HREF="pics/keyboard.jpg"><IMG SRC="pics/keyboard.gif" ALT="Keyboard Interface"></A>
+<P>So eventually, you're gonna end up with a big wire mess which should look similar to these…</P>
+<A HREF="pics/panel_wiring.jpg"><IMG SRC="pics/panel_wiring.gif" ALT="Control Panel Wiring"></A>
+<P>But if you did it right, then it should last you for years until you finally lose that "ol' nostalgia" and mothball your little ~$1,500 project.</P>
+<P>&nbsp;</P>
+<B><P>Keyboard Interfacing - Problems</P>
+</B><P>At first I thought the keyboard idea was working exceptionally well.  It was nice to have the ALT &amp; CTRL key in combination with X and Q, since many PC games require this key combination to exit them.  What I did have problems with were the following:</P>
+<OL>
+
+<LI>ALT+R resets CPU emulation in GENECYST, NESticle, and Callus.  (i.e. pressing "Player 1 / Action 2" and "Player 2 / Up" results in the emulator resetting.  It's a real pain if you're trying to play a two player game.</LI>
+<LI>CTRL pauses "Mortal Kombat 3" PC Edition.  IT happens to be "Low Punch" in the game, which almost all fighters use for their special moves.  So the first player is never allowed to touch it, decreasing the number of moves he has available in head-to-head action.</LI>
+<LI>SPACE happens to enable the GUI interface/menubar in GENECYST, NESticle, and Callus.  (Basically, any Bloodlust emulator.)  It's a pain too.  Not bad for NES because it only had two action buttons per controller anyway.  (CTRL &amp; ALT)  Bad for the others, though, since usually more than 2 buttons need to be used.</LI>
+<LI>Left SHIFT doesn't register or can't be redefined as an action button under the Bloodlust emulators rendering it useless.</LI>
+<LI>CTRL, ALT, and Left SHIFT are toggle keys, that is when you get a message that says "Press any key to continue…" those keys don't actually do anything.  You have to remember to press anything else, but those.</LI></OL>
+
+<P>&nbsp;</P>
+<P>How does one get around these problems?  NOT easy.</P>
+<P>One option is to remap the first four Player 1 keys from CTRL/ALT/SPACE/LSHIFT to C/V/B/N.  This would work with everything on the system, but you would have to sit down with a pack of smokes for the day as it would probably take you several hours to reprogram all the MAME ROM keyboard controls.</P>
+<P>The other options?</P>
+<OL>
+
+<LI>I'm currently trying to use one hacked Gravis Gamepad in conjunction with Simone Zanella's JOYEMU TSR program, which remaps joystick input into keystrokes.  This way you can load different configuration files for different programs.  (i.e. keep CTRL/ALT combo for MAME but create an alternate configuration file for others using C/V/B/N combo, or something similar.</LI>
+<LI>I also tried making a TSR which trapped those four keys and output the alternate keystrokes.  (i.e. when you press CTRL, "C" is actually returned.)  The TSR worked well at the DOS prompt, but failed under all the emulators.  Of course I haven't programmed in assembly for years and years, and I'm not too fresh on all of the different methods to trap keystrokes, etc.  (i.e. various BIOS interrupt calls vs. various DOS interrupt calls.)  I tried two methods, but neither would work under emulation.</LI></OL>
+
+<P>I gave the assembly code to a "bloak" from Australia, by the name of Todd.  Todd and his buddy, Jason were quite interested in my success in connecting my CRT to my PC and making it work and we have exchanged several ideas on many aspects of this new hobbie since first contact.</P>
+<P>Todd seems to know his stuff on assembly and keyboard TSR's.  I hope he can come up with a keyboard solution.  </P>
+<P>As of yet, I haven't been able to get JOYCP (part of JOYEMU) to run on my "arcade" computer to calibrate the gamepad.  Calibration is necessary in order to start remapping joysticks to keystrokes.</P>
+<P>Also, I un-soldered all of the previous wires connecting the Player 1 joystick and the first four action buttons which were previously connected to the keyboard interface.  And as I stated before, I lost the paper with all the keyboard key cross-references on it.  So now, I can't even play a game, and I really don't want to go back to the way I had it since some emulators don't like some of my default key controls.</P>
+<P>C'mon, Todd.  Work some magic.</P>
+<P>If anyone has anything to offer on this, please drop me an e-mail from the Main Page.  Thanks.</P>
+<P>&nbsp;</P>
+<B><P>Mouse/Trackball Interface</P>
+</B><P>Shortly after purchasing my Street Fighter II cabinet I went and bought a used trackball for $10.  I cleaned it up and serviced it a bit.  However, I could not seem to interface its electronics to an old mouse (with a screwed rubber ball) that I had.  I had read of others snapping of bits of their mouse boards and connecting them to trackballs, and the likes, but that seemed cheesy to me.  Besides, I didn't have anymore room on the control panel to put the thing in anyway.  It's huge.  I was appalled to read that one guy even melted several "toy soldiers" together with a soldering iron to hold a mouse under his control panel which was "krazy-glued" to a metal shaft for use as a "TRON-like" spinner!  Man, how long would that really last?</P>
+<P>So giving up on this aspect, I just decided to order Logitech's (there are no other comparable brands for a PC mouse than Logitech) Trackman Marble.  It sports 3 buttons, and no stupid "window-scroll wheel" (unless you get the "+" model) and a "frictionless" trackball.  It works by scanning the dots passing by on the surface of the ball.  Really cool.  It worked great.  I just drilled one hole in the back of it, screwed a large bolt through the plastic, put it back together, and slid the bolt through a drill hole in the control panel.  After tightening it up with a nut underneath, it has not moved even a millimeter, ever, and works excellently.  Great for Mech Warrior and the likes!</P>
+
+<B><P>In the end...</P>
+<P>I ended up using 2 Gravis Gamepads wired to the joysticks and the first two actions buttons for each player, and the rest to the keyboard.  Some games don't accept keyboard control very well or in some cases, at all.  So I use JOYEMU to change keystrokes the joysticks produce.  For example, under QuickMAME I assign both joysticks: UP, DOWN, LEFT, RIGHT for the directionals and ENTER and ESC for the two action buttons.  This way I can use either stick to scroll through the list and select a game or exit the menu.  Conversely, I modify the batch file that loads MAME to switch the joystick keystroke output to UP, DOWN, LEFT, RIGHT, C, V for player 1 --- and R, F, D, G, A, S, for player 2, respectively.  For games that require ONLY joystick input I simply include "JOYEMU -" to the batch file to disable keystroke emulation.  This way the keystrokes don't interfere with PC games that require ONLY joystick input, etc.
+
+</FONT></BODY>
+</HTML>

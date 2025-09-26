@@ -1,0 +1,106 @@
+Information for VGA to TV driver version 0.6
+Written by Tomi Engdahl 27 October 1996
+
+This program is a driver for VGA to TV circuit designed by Tomi 
+Engdahl. You are allowed to use this program freely for your
+own noncommercial applications. You can also freely copy
+this driver packet to you friends, but you are not allowed
+to ask any money for that. For commercial applications
+ask more detaild from the author Tomi Engdahl (tomi.engdahl@iki.fi).
+
+There is no guarantee that this program works anyway as desired.
+I take no responsibility of the problems this program might cause.
+
+Instructions for use
+
+VGA to TV driver is a small (less than 2 kilobytes) DOS TSR program 
+which enables VGA card to be connected to ordinary NTSC or PAL TV with 
+VGA to TV converter designed by Tomi Engdahl. 
+
+The driver program replaces some VGA BIOS routines with
+it's own code to make VGA card to use frequencies suitable to PAL TV set.
+The program is designed to be only used with my circuit which is
+connected to TV. Do not keep your VGA monitor connected to VGA card
+when the driver is loaded, because the frequencies the driver use
+can damage some monitors !
+
+The program is very easy to use. Just run the driver program 
+(VGA2PAL.COM for PAL TVs or VGA2NTSC.COM for NTSC TVs) and your 
+VGA card is in TV mode. 
+
+When you have loaded the driver to memory the only way to get rid of 
+the driver normally is to reboot the computer. The driver works also 
+nicely in Windows 3.1 and Windows 95 full-screen dos sessions.
+If you run this program under Windows, you can have the normal
+Windows in VGA frequencies and the full screen DOS session
+in TV frequencies. 
+
+The driver program supports following VGA modes:
+
+Mode    Resolution                      Comments
+-----------------------------------------------------------------
+00H     40x25 text                      Uses half of screen width
+01H     40x25 color text                Uses half of screen width
+02H     80x25 text                      Uses 8x8 font
+03H     80x25 color text                Uses 8x8 font
+04H     320x200 graphics 4 color
+05H     320x200 graphics 4
+06H     640x200 graphics 2
+0DH     320x200 graphics 16 color
+0EH     640x200 graphics 16 color
+0FH     640x350 graphics 2
+10H     640x350 graphics 4 color
+11H     640x350 graphics 16 color
+12H     640x480 graphics 16 color
+13H     320x200 graphics 256 color
+95H     640x480 grpahics 2560 color     Cirrus specific mode
+
+VGA2TV.COM is a small (less than 2 kbytes) TSR program which loads to
+memory and stays there until you restart your computer.
+
+
+Contacting the author of the program
+
+I am interrested in hearing comment how well this program works
+with different platforms. You can reach my at my e-mail address
+at tomi.engdahl@iki.fi. When you report how well this driver works,
+include the following information to the message (without full
+information set the information is nearly useless).
+
+- version number of the driver used
+- brand and model of you VGA card
+- computer type
+- DOS version used
+- what drivers are loaded in memory
+- programs used with the driver and how well they worked
+
+If there is something wrong in some modes, then tell also
+following information:
+
+- the screen mode where the problem is
+- exact description (very technical preferred) what is wrong
+
+Remember to post infomation about the newest drivers only.
+If your driver is older than few months, then get a newest versio
+from http://www.iki.fi/~then/circuits/vga2tv.html and test it
+before reporting about problems.
+
+History
+
+Version 0.1
+- only test version, did not do anything useful
+Version 0.2  16 June 1996
+- supports VGA mode 03h and 13h at PAL frequencies
+Version 0.3
+- added support for text modes 02h and 03h, but font looks agly
+- added support for 640x480,256 graphics using Cirrus cards
+- automatic switch to TV mode when driver is loaded
+Version 0.4
+- font problems in text mode solved
+Version 0.5   3 October 1996
+- Added support for all normal VGA modes (except B&W specific)
+Version 0.6   27 October 1996
+- interrupt calling routine rewritten for better compatibility
+- added check if driver already installed
+- driver supports now both PAL and NTSC
+

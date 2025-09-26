@@ -1,0 +1,159 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>The Cabinet</TITLE>
+<META NAME="Template" CONTENT="C:\PROGRAM FILES\MICROSOFT OFFICE\OFFICE\html.dot">
+</HEAD>
+<BODY TEXT="#ffff00" LINK="#ffff00" VLINK="#c0c0c0" bgproperties="fixed" BACKGROUND="graphics/classic.jpg">
+
+QuickMAME Frequently Asked Questions (FAQ Available in QMMANUAL.DOC as well)</P>
+
+<HR>
+
+Q: How do I run the program from Windows?</P>
+
+A: The program is installed in a common directory defined by the PATH statement in your AUTOEXEC.BAT file.  Typically, C:\QMLAUNCH.  You do not have to place or copy the program files in the same directory as MAME or any other emulator such is the case with other front-ends.  This gives the user a single location to update the front-end and at the same time allows QM to be used with virtually any DOS emulator regardless of which directory/folder it may reside in.  All QuickMAME program files, and other files such as README's and docs wll be located here.</P>
+
+Just Right-click the directory you want to start QuickMAME in and click "QuickMAME Here...". Simply double-click the QM.REG file to add a "right-click" function for directories/folders if you did not choose this option when installing.</P>
+
+<HR>
+
+Q: How do I run the program from DOS?</P>
+
+A: Just type "QM" while in your emulator directory (i.e. C:\MAME) and press the enter key.</P>
+
+<HR>
+
+Q: I can't start the program from Windows or DOS like you've explained above.  What's up?</P>
+
+A: Most likely, the installation program was not successful in adding the line PATH=C:\QMLAUNCH;%PATH% to your C:\AUTOEXEC.BAT for some reason.  Check AUTOEXEC.BAT to make sure it's in there.  You can even just add …C:\QMLAUNCH… to the existing PATH statement if it's already there too.</P>
+
+<HR>
+
+Q: Why don't games launch when I try and run QMEXEC.EXE?</P>
+
+A: QMEXEC.EXE must be run from QM.BAT.  The batch file is what makes the whole program work.  You must run QM.BAT not QMEXEC.EXE.</P>
+
+<HR>
+
+Q: Why do you use a batch file instead of a COM file as in previous versions?</P>
+
+A: The QM.COM file was not releasing memory properly under DOS when more than one menu was nested.  Also, I need to customize my QM.BAT file for joystick TSR's to enable and disable keyboard vs. joystick support on my cabinet since some emulators accept keyboard input only.  You may also want to customize the batch file for special functions like keyboard/joystick emulation if you have an arcade cabinet.</P>
+
+<HR>
+
+Q: Why does it lock up when I start it?</P>
+
+A: Check your sound setting environment string BLASTER= in AUTOEXEC.BAT and make sure they match your sound card.  If you're running under pure DOS you may need to set up a DOS driver for your sound card first.  If you can not make it work, disable the sound by modifying the QM.INI file and change the "Sound Option" line to read "Sound Option=0".</P>
+
+<HR>
+
+Q: I tried your "sound card disable" suggestion and it still locks up!  What now?</P>
+
+A: If you have the line DEVICE=C:\WINDOWS\EMM386.EXE or something similar in C:\CONFIG.SYS try REM-ming out this statement.  It's for EMS (Expanded Memory Services) which as far as I know hasn't been required for apps or games developed in the last few years, so it's probably safe to remove.  I know for sure QuickMAME doesn't like QEMM (Quarterdeck Expanded Memory Manager) very much.  If you have to keep this line in CONFIG.SYS then try adding the following switch: -DMA 64  (For EMM386 add the switch: -D 64)</P>
+
+<HR>
+
+Q: Nope, that didn't work either.</P>
+
+A: Try it under pure DOS mode and disable sound support as described above.  E-mail me with the exact problem and I'll see if I can help you out.  No one has reported a problem like this yet, but I'm sure it's coming with all the "oddball" hardware out there.</P>
+
+<HR>
+
+Q: Why is the background screen all garbled?</P>
+
+A: Make sure your video card is VESA 1.2 compliant or higher.  You may need a VESA TSR to extend the BIOS and make it display correctly.  Try downloading UNIVESA.ZIP from my web site, unzip to C:\ and add the line UNIVESA to C:\AUTOEXEC.BAT.</P>
+
+<HR>
+
+Q: Why is only half of the control panel showing and pushed way up on the screen?</P>
+
+A: I have encountered this problem with Matrox video cards.  I have no idea why.  Everything else works fine except for the dang control panel shifting up.  I don't have one to debug it on either.  So unless you want to send me one to test, or work on the assembly code yourself my best guess is this: The "VESA granularity" or the "VESA Bank Number" doesn't correspond to other VESA compliant video cards on Matrox-based cards.</P>
+
+<HR>
+
+Q: Why can't I see the mouse cursor?</P>
+
+A: Windows doesn't add DOS VESA support to the mouse cursor.  You may have to load a VESA DOS mouse driver in AUTOEXEC.BAT or DOSSTART.BAT for MS-DOS mode, first.  If that doesn't work, use the "Force Mouse Cursor Emulation" checkbox in the control panel.</P>
+
+<HR>
+
+Q: Why can't I see the mouse cursor under DOS with a mouse driver loaded?</P>
+
+A: The DOS mouse driver may not be VESA compliant.  Ask your computer manufacturer for an updated mouse driver or search the net.  Logitech's MOUSE.EXE 7.xx or higher works great.</P>
+
+<HR>
+
+Q: Why is the bloody emulated mouse cursor so "jumpy" under Windows?</P>
+
+A: No idea.  The mouse interrupt seems to return values not for "every 1 pixel" but for "every 4 or 8 pixels" only.  I tried to get around this by programming the DOS mouse resolution to 1 pixel for every "Mickey" movement of the mouse, but to no avail.  Seems to work just fine under DOS though.  Windoze!  )c8<</P>
+
+<HR>
+
+Q: How do I work the thing?</P>
+
+A: Arrow Keys	- Up, Down, Left = Page Up, Right = Page Down</BR>
+   ENTER	- Launch selection</BR>
+   ESC		- Quit program, close dialog window.</BR>
+   TAB		- Show Control Panel (Can also click left-mouse button)</P>
+
+<HR>
+
+Q: Can I use a joystick to work the menu?</P>
+
+A: Yes, with QM 4.10 or higher.  Grab Simone Zanella's JOYEMU program off of any major emulation site to emulate the keyboard if your version is prior to this or your joystick/gamepad is buggy when used with QM.</P>
+
+<HR>
+
+Q: What kind of graphic files can I use for backgrounds, previews, etc.?</P>
+
+A: They must be PCX files, preferably "PCX Version 5" or higher.  Monochrome (1-bit), 16-Color (4-bit), or 256-color (8-bit) files are all supported.  24-bit PCX files are not supported as of yet.</P>
+
+<HR>
+
+Q: What kind of sound files can I use for background music?</P>
+
+A: 8-Bit, mono, 11KHz or 22KHz Uncompressed (PCM) WAV files can be used.</P>
+
+<HR>
+
+Q: Why does the database load so slowly under pure DOS but seems so fast under Windows?</P>
+
+A: By default there is no disk caching under pure DOS unless you enable it.  You must add the line: "LH SMARTDRV" to C:\WINDOWS\DOSSTART.BAT to enable DOS disk caching if restarting in MS-DOS mode.  If you are not loading Windows at all then place this line in C:\AUTOEXEC.BAT instead.  You may also need DEVICE=C:\WINDOWS\HIMEM.SYS included in CONFIG.SYS as well if it's not there by default.  Type SMARTDRV /? At the command prompt by itself to get a list of switches valid for your operating system.</P>
+
+<HR>
+
+Q: Why are the colors not as detailed in the preview window or the background image compared to when I view or edit them?</P>
+
+A: Because I'm using the 640x480 256-Color (101h) VESA mode.  Try using an image-editing program to reduce your background image to 256-color "Standard Palette" using "error diffusion" or "dithering".  This will give a more uniform effect although it may be somewhat "grainy".</P>
+
+<HR>
+
+Q: Why the hell are you using that mode?  Why don't you use hi-color and better resolution?</P>
+
+A: I really like the fade in/out effects.  This is not feasible with hi-color or true-color modes since they do not include a palette and therefore cannot be faded.  So, I've created two separate palettes covering a fairly good range of all possible colors.  Every shade has 4 brightness levels, and seems to work fairly well.  I can keep one palette visible while I fade the other and vice versa.  Therefore any 256 color PCX image displayed is actually getting dithered down to 125 colors which about half the original palette.  Not bad though.  I'm able to import a PCX file, decode it, rescale it, and dither the palette down in a fraction of a second with ASM code.  Be thankful.</P>
+
+I don't use higher resolutions for two reasons… [1] My original arcade monitor only supports 640x480 via the NTSC video card so anything else is just useless, and [2] because virtually everyone should be able to use it regardless of hardware since you only need 512K of video memory to display that particular VESA mode.</P>
+
+<HR>
+
+Q: What's the deal with PCX previews?  How come there aren't any?  )c8<  </P>
+
+A: I don't supply those.  They can take up a lot of room and basically I don't have enough room on my web page to upload them.  If you want to make your own, just simply follow the instructions with any given emulator on how to generate PCX screenshots so you can use view them with the preview.  Don't ask me how to do it.  A few of the more popular ones you simply press the "F12" key to "snap" a pic.  Remember, the PCX filename prefix has to match the corresponding ROM's filename.  (i.e. For "rampage.zip" you need a matching "rampage.pcx" file.)</P>
+
+<HR>
+
+Q: What's the deal with PNG (Portable Network Graphics) files?  Does QuickMAME support them?</P>
+
+A: No, not yet, unfortunately.  I would appreciate some easy reference code for decoding these files.  As of MAME v0.35 (Beta 13) all screen "snapshots" are now saved in this format instead of the legacy PCX format (as in previous versions) via MAME.  As of this writing, QuickMAME does not support PNG importing yet.  I know that the PNG code is available, but I need someone to convert it to a Microsoft 16-bit Language Library for me, since none of my coding is in C/C++.  All my code is assembly or MS QuickBasic 4.5 format.  Can anyone help me on this one?</P>
+
+<HR>
+
+Remember - If you don't like something, then change the code (it's available on my site too) or tell me how to do it and I'll attempt to make the changes.</P>
+
+I don't know what else I can put in this document.  The program seems to be fairly easy to use.  Of course, I created it so I know how to use it.</P>
+ 
+Got questions?  Figure it out yourself if you can.  It ain't rocket-science.  If you're really stuck then e-mail me.  </P>
+
+<HR>
